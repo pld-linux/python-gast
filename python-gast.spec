@@ -8,7 +8,7 @@ Summary:	Python AST that abstracts the underlying Python version
 Summary(pl.UTF-8):	Pythonowe AST niezależne od wersji Pythona
 Name:		python-gast
 Version:	0.5.3
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/gast/
