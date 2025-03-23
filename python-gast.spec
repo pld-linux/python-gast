@@ -7,14 +7,13 @@
 Summary:	Python AST that abstracts the underlying Python version
 Summary(pl.UTF-8):	Pythonowe AST niezależne od wersji Pythona
 Name:		python-gast
-Version:	0.5.3
-Release:	4
+Version:	0.6.0
+Release:	1
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/gast/
 Source0:	https://files.pythonhosted.org/packages/source/g/gast/gast-%{version}.tar.gz
-# Source0-md5:	fdff900805e03e9dd76d377eb4cbaed7
-Patch0:		gast-python2.patch
+# Source0-md5:	4a088eca6fd6bae16bc2fd2ff828de51
 URL:		https://pypi.org/project/gast/
 %if %{with python2}
 BuildRequires:	python-modules >= 1:2.7
@@ -62,7 +61,6 @@ standardowego modułu "ast".
 
 %prep
 %setup -q -n gast-%{version}
-%patch -P 0 -p1
 
 %build
 %if %{with python2}
