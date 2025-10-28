@@ -65,30 +65,17 @@ standardowego modułu "ast".
 %build
 %if %{with python2}
 %py_build
-# deprecated target, but sometimes still used: %{?with_tests:test}
 
 %if %{with tests}
-#PYTHONPATH=$(pwd)
 %{__python} -m unittest discover -s tests
-# -t $(pwd)
-## use explicit plugins list for reliable builds (delete PYTEST_PLUGINS if empty)
-#PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
-#PYTEST_PLUGINS= \
-#%{__python} -m pytest ...
 %endif
 %endif
 
 %if %{with python3}
 %py3_build
-# deprecated target, but sometimes still used: %{?with_tests:test}
 
 %if %{with tests}
-#PYTHONPATH=$(pwd)
 %{__python3} -m unittest discover -s tests
-## use explicit plugins list for reliable builds (delete PYTEST_PLUGINS if empty)
-#PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
-#PYTEST_PLUGINS= \
-#%{__python3} -m pytest ...
 %endif
 %endif
 
